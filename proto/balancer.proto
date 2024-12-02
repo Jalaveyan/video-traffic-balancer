@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package videobalance;
+
+option go_package = "./proto"; // Указывает, что файлы должны быть связаны с этой папкой
+
+service Balancer {
+  rpc Redirect (RedirectRequest) returns (RedirectResponse);
+}
+
+message RedirectRequest {
+  string video = 1;
+}
+
+message RedirectResponse {
+  string targetUrl = 1;
+}

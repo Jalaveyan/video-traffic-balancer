@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  video-balancer:
+    build: .
+    container_name: videobalancer
+    ports:
+      - "443:443"  # gRPC сервер будет слушать на порту 443
+    environment:
+      CDN_HOST: "cdn.example.com"  # CDN хост
+      SERVER_PORT: ":443"  # Порт gRPC сервера
+    restart: unless-stopped
+    networks:
+      - grpc-network
+    # Добавлен volume для сертификатов, если нужно для HTTPS
+    volumes:
+      - ./certs:/etc/ssl/certs  # Если у вас есть SSL сертификаты
+      
+networks:
+  grpc-network:
+    driver: bridge  # Указание сети для сервиса
+
