@@ -22,7 +22,7 @@
 
 ### 1. Клонирование репозитория
 ```bash
-git clone https://github.com/yourusername/videobalance.git
+git clone https://github.com/Jalaveyan/video-traffic-balancer.git
 cd videobalance
 ```
 
