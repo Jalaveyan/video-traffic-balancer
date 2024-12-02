@@ -44,7 +44,8 @@ export SERVER_PORT=:443
 
 ### 4. Запуск сервера
 ```bash
-go run cmd/server/main.go
+docker build -t videobalance .
+docker run -d -p 443:443 --name videobalance videobalance
 ```
 
 ### 5. Мониторинг
