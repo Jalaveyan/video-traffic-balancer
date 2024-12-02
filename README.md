@@ -71,7 +71,7 @@ message RedirectResponse {
 
 ### Пример gRPC-запроса с использованием grpcurl:
 ```bash
-grpcurl -d '{"video": "https://s1.origin-cluster/video/123/xcg2djHckad.m3u8"}'   -plaintext localhost:443 videobalance.Balancer/Redirect
+ghz --insecure --proto proto\balancer.proto --call videobalance.Balancer/Redirect -d "{\"video\": \"https://s1.origin-cluster/video/123/xcg2djHckad.m3u8\"}" -c 2000 -n 10000 localhost:443
 ```
 
 ## Структура проекта
