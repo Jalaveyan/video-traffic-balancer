@@ -23,7 +23,7 @@
 ### 1. Клонирование репозитория
 ```bash
 git clone https://github.com/Jalaveyan/video-traffic-balancer.git
-cd videobalance
+cd video-traffic-balancer
 ```
 
 ### 2. Установка зависимостей
